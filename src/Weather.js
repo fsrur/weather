@@ -40,12 +40,12 @@ function Weather() {
   }, [])
   
   
-//  Fetch zip
+  //  Fetch zip
   useEffect(()=>{ 
-      fetch("https://api.openweathermap.org/geo/1.0/zip?zip="+ zip +",US&appid="+ API_KEY +"")
-      .then(res => res.json())
-      .then((result) => {
-//  Set new lat/long from zip fetch
+    fetch("/api/location?zip=" + zip)
+    .then(res => res.json())
+    .then((result) => {
+      //  Set new lat/long from zip fetch
       setLat(result.lat)
       setLong(result.lon)
       setCity(result.name)
@@ -54,14 +54,14 @@ function Weather() {
       console.log(zip)
       console.log(result)
     })
-    }, [zip, lat, long])
+  }, [zip, lat, long])
     
-//  Fetch weather data with new lat/long
-   useEffect(()=>{       
-      fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+ lat +"&lon="+ long +"&units=imperial&exclude=current,minutely,hourly,alerts&appid="+ API_KEY +"")
-      .then(res => res.json())
-      .then((data) => {
-//   Set weather data from weather fetch
+  //  Fetch weather data with new lat/long
+  useEffect(()=>{       
+    fetch("/api/weather?lat=" + lat + "&lon=" + long)
+    .then(res => res.json())
+    .then((data) => {
+      //   Set weather data from weather fetch
       setMaxTemp0(data.daily[0].temp.max)
       setMaxTemp1(data.daily[1].temp.max)
       setMaxTemp2(data.daily[2].temp.max)
@@ -84,7 +84,7 @@ function Weather() {
     })
   }, [lat, long])  
   
-//Const with day of the week, base on setDay
+  //  Const with day of the week, base on setDay
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
   const dayNum0 = new Date(day0 * 1000).getDay();
   const today0 = days[dayNum0];
