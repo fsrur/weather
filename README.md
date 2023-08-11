@@ -4,7 +4,7 @@
 The "Weather" project is a React-based application that fetches and displays the daily maximum and minimum temperature, weather icon, and the day of the week for a specific location. The location is determined based on a zip code entered by the user.
 
 ## Prerequisites
-- Node.js and npm
+- Node.js
 - OpenWeatherMap API key
 
 ## Installation or Setup
@@ -27,11 +27,11 @@ The "Weather" project is a React-based application that fetches and displays the
    Replace 'your_open_weather_map_api_key' with your actual API key.
 
 ## Running the Application
-In the project directory, you can run:
+In the project directory, run:
 
 `npm start`
 
-This runs the app in the development mode. Open http://localhost:3000 to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
+This runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
 
 ## Usage
 To use the application, enter a zip code into the input field and press the submit button. The application will then fetch and display the daily maximum and minimum temperature, weather icon, and the day of the week for the specific location corresponding to the entered zip code.
