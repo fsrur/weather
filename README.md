@@ -14,9 +14,17 @@ The "Weather" project is a React-based application that fetches and displays the
 
 2. **Install the dependencies:**
 
-   Navigate to the project directory and run the following command:
+   Navigate to the project directory and run:
 
    `npm install`
+
+   Then navigate to the project's frontend directory and run:
+
+   `npm install`
+
+   After that had completed, run:
+
+   `npm run build`
 
 3. **Set up environment variables:**
 
@@ -31,7 +39,7 @@ In the project directory, run:
 
 `npm start`
 
-This runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
+Open http://localhost:5000 to view it in the browser.
 
 ## Usage
 To use the application, enter a zip code into the input field and press the submit button. The application will then fetch and display the daily maximum and minimum temperature, weather icon, and the day of the week for the specific location corresponding to the entered zip code.

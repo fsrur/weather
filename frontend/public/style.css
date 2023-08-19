@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: #F5F5F5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  text-align: center;
+  padding: 0;
+  margin: 0px auto 20px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+input {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/*Hide up/down arrows on Chrome, Safari, Edge, Opera*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/*Hide up/down arrows on mozilla*/
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+button {
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #155a8a;
+}
+
+.button {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/*City name*/
+.city {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Weather data */
+.row {
+  text-align: center;
+  margin: 0px auto 40px;
+}
+
+.col {
+  display: inline-block;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/*Comments below weather forecast*/
+.instructions {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin: 5px auto;
+  max-width: 800px;
+  font-style: italic;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/*Size adjustments for smaller screens*/
+@media only screen and (max-width: 768px) {
+  .header {
+    font-size: 30px;
+  }
+
+  .instructions{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+  
+  @media only screen and (max-width: 728px) {
+  .col {
+    padding: 15px;
+    margin: 10px;
+  }
+}
+ 
+@media only screen and (max-width: 618px) {
+  .col {
+    padding: 10px;
+    margin: 5px;
+  }
+}
+  
+  @media only screen and (max-width: 540px) {
+  .col {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+}
