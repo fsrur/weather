@@ -8,31 +8,12 @@ The "Weather" project is a React-based application that fetches and displays the
 - OpenWeatherMap API key
 
 ## Installation or Setup
-1. **Clone the repository:**
-
-   `git clone https://github.com/fsrur/weather.git`
-
-2. **Install the dependencies:**
-
-   Navigate to the project directory and run:
-
-   `npm install`
-
-   Then navigate to the <b>project's frontend directory</b> and run:
-
-   `npm install`
-
-   After that completes, also in the <b>project's frontend directory</b>, run:
-
-   `npm run build`
-
-3. **Set up environment variables:**
-
-   This project uses an environment variable ('REACT_APP_API_KEY') for the OpenWeatherMap API key. You need to create a '.env' file in the project root and add your API key like this:
-
-   'REACT_APP_API_KEY = your_open_weather_map_api_key'
-
-   Replace 'your_open_weather_map_api_key' with your actual API key.
+1. Clone this repository.
+2. Navigate into the repository in your terminal.
+3. Run `npm install` to install the required packages.
+4. Navigate into the frontend directory.
+5. Run `npm install`. After that completes, run `npm run build`.
+6. Create a **'.env'** file in the root directory of your project. Add the following, replacing 'your_open_weather_map_api_key' with your actual OpenWeatherMap API key: **REACT_APP_API_KEY = your_open_weather_map_api_key**
 
 ## Running the Application
 In the project directory, run:
