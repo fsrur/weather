@@ -4,7 +4,7 @@ import Button from "./Button"
 
 function Weather() {
     //  Set initial states
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [maxTemp0, setMaxTemp0] = useState([])
     const [maxTemp1, setMaxTemp1] = useState([])
     const [maxTemp2, setMaxTemp2] = useState([])
@@ -59,6 +59,7 @@ function Weather() {
   //  Fetch weather data with new lat/long
   useEffect(()=>{   
     if (locationLoaded) {    
+
         fetch("/api/weather?lat=" + lat + "&lon=" + long)
         .then(res => res.json())
         .then((data) => {
@@ -79,6 +80,7 @@ function Weather() {
         setIcon1(data.daily[1].weather[0].icon)
         setIcon2(data.daily[2].weather[0].icon)
         setIcon3(data.daily[3].weather[0].icon)
+        setLoading(false)
         console.log(lat)
         console.log(long)
         console.log(data)
@@ -86,6 +88,7 @@ function Weather() {
     }
   }, [lat, long, locationLoaded])  
   
+
   //  Const with day of the week, base on setDay
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
   const dayNum0 = new Date(day0 * 1000).getDay();
@@ -99,7 +102,7 @@ function Weather() {
 
   
   if(loading === true){
-    return <div>Loading...</div>
+    return <div div className="loading-message">Loading...</div>
   } else return( 
     <div>
     
@@ -114,25 +117,25 @@ function Weather() {
         <div className="row">
             <div className="col">
                 {today0} <br />
-                <img src={"http://openweathermap.org/img/wn/"+ icon0 +"@2x.png"} /> <br />
+                <img src={"https://openweathermap.org/img/wn/"+ icon0 +"@2x.png"} /> <br />
                 High: {Math.round(maxTemp0)} <br />
                 Low: {Math.round(minTemp0)}
             </div>
             <div className="col">
                 {today1} <br />
-                <img src={"http://openweathermap.org/img/wn/"+ icon1 +"@2x.png"} /> <br />
+                <img src={"https://openweathermap.org/img/wn/"+ icon1 +"@2x.png"} /> <br />
                 High: {Math.round(maxTemp1)} <br />
                 Low: {Math.round(minTemp1)}
             </div>
             <div className="col">
                 {today2} <br />
-                <img src={"http://openweathermap.org/img/wn/"+ icon2 +"@2x.png"} /> <br />
+                <img src={"https://openweathermap.org/img/wn/"+ icon2 +"@2x.png"} /> <br />
                 High: {Math.round(maxTemp2)} <br />
                 Low: {Math.round(minTemp2)}
             </div>
             <div className="col">
                 {today3} <br />
-                <img src={"http://openweathermap.org/img/wn/"+ icon3 +"@2x.png"} /> <br />
+                <img src={"https://openweathermap.org/img/wn/"+ icon3 +"@2x.png"} /> <br />
                 High: {Math.round(maxTemp3)} <br />
                 Low: {Math.round(minTemp3)}
             </div>

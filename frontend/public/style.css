@@ -58,6 +58,12 @@ button:hover {
   margin: 40px 0;
 }
 
+.loading-message {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
 /*City name*/
 .city {
   margin-top: 15px;
