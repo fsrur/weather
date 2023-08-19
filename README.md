@@ -18,11 +18,11 @@ The "Weather" project is a React-based application that fetches and displays the
 
    `npm install`
 
-   Then navigate to the project's frontend directory and run:
+   Then navigate to the <b>project's frontend directory</b> and run:
 
    `npm install`
 
-   After that had completed, run:
+   After that completes, also in the <b>project's frontend directory</b>, run:
 
    `npm run build`
 
